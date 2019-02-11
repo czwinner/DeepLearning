@@ -13,6 +13,11 @@
 &emsp;&emsp;为了实现AlexNet，让我们在pyimagesearch中的nn的conv子模块中创建一个名为alexnet.py的文件。
 <h4>训练Alexnet<br/>
 &emsp;&emsp;定义了AlexNet架构之后，训练网络。 打开一个新文件，将其命名为train_alexnet.py。我们看到获得的验证集准确度为92.97％。<br/>
-
+ 
+![](https://github.com/czwinner/DeepLearning/blob/master/dogs_vs_cats/output/788.png)
+<h4>评估网络<br/>
+&emsp;&emsp;使用标准方法和过采样技术评估测试集上的AlexNet，创建crop_accuracy.py的文件。<br/>
+ 
+ 
   
   
