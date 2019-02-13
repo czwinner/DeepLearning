@@ -10,3 +10,5 @@
 <h3>评估网络<br/>
 &emsp;&emsp;rany_accuracy.py评估准确率。
   
+![](https://github.com/czwinner/DeepLearning/blob/master/resnet_tinyimagenet/output/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-02-13%20%E4%B8%8A%E5%8D%889.03.23.png)  
+rank-1和rank-5准确率分别为50%和75%左右
