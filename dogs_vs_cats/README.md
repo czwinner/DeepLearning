@@ -18,6 +18,6 @@
 <h4>评估网络<br/>
 &emsp;&emsp;使用标准方法和过采样技术评估测试集上的AlexNet，创建crop_accuracy.py的文件。<br/>
  
- 
+![](https://github.com/czwinner/DeepLearning/blob/master/dogs_vs_cats/output/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-02-07%20%E4%B8%8B%E5%8D%885.05.40.png)
   
-  
+如我们的结果所示，我们在测试集上达到92.60％的准确度。 然而，通过应用过采样方法，我们能够将分类准确度提高到94.00％，增加1.4％。
