@@ -16,3 +16,7 @@
 ![](https://github.com/czwinner/DeepLearning/blob/master/emotion_recognition/datasets/fer2013/output/vggnet_emotion.png)
 <h3>评估网络
 <h4>&emsp;&emsp;test_recognizer.py评估网络
+  
+![](https://github.com/czwinner/DeepLearning/blob/master/emotion_recognition/datasets/fer2013/output/%E5%87%86%E7%A1%AE%E7%8E%87.png)
+<h3>实时情感检测
+<h4>&emsp;&emsp;emotion_detector.py应用于实时检测视频流中的情绪和面部表情。 
