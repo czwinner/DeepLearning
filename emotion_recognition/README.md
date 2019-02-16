@@ -12,3 +12,7 @@
 <h4>&emsp;&emsp;pyimagesearch中的nn里的conv目录中定义emotionvggnet.py<h4/>
 <h3>训练我们的面部表情识别器
 <h4>&emsp;&emsp;train_recognizer.py训练我们的网络，训练75轮。<h4/>
+  
+![](https://github.com/czwinner/DeepLearning/blob/master/emotion_recognition/datasets/fer2013/output/vggnet_emotion.png)
+<h3>评估网络
+<h4>&emsp;&emsp;test_recognizer.py评估网络
