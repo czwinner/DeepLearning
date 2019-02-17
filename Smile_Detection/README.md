@@ -7,3 +7,7 @@
 经过15轮训练，网络获得了93％的分类准确率。<br/>
 &emsp;&emsp;现在我们已经训练了我们的模型，构建detect_smile.py以访问我们的网络摄像头/视频文件并对每个帧应用微笑检测。<h4/>
 <h3>结果显示 <br/>
+  
+![](https://github.com/czwinner/DeepLearning/blob/master/Smile_Detection/results/result01.png)  
+
+![](https://github.com/czwinner/DeepLearning/blob/master/Smile_Detection/results/result02.png)
