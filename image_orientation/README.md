@@ -22,4 +22,10 @@ extract_features.py进行特征提取，提取的hdf5文件在hd5目录。<br/>
 
 ![](https://github.com/czwinner/DeepLearning/blob/master/image_orientation/results/%E5%87%86%E7%A1%AE%E7%8E%87.png)
 <h3>纠正方向</h3>
-&emsp;&emsp;为了证明我们的VGG16特征提取+ Logistic回归分类器可以对图像进行分类校正，orient_images.py随机从数据集中抽取10张旋转的图片进行测试，结果如下：  
+&emsp;&emsp;为了证明我们的VGG16特征提取+ Logistic回归分类器可以对图像进行分类校正，orient_images.py随机从数据集中抽取10张旋转的图片进行测试，结果如下：
+
+![](https://github.com/czwinner/DeepLearning/blob/master/image_orientation/results/result01.png)
+![](https://github.com/czwinner/DeepLearning/blob/master/image_orientation/results/result02.png)
+![](https://github.com/czwinner/DeepLearning/blob/master/image_orientation/results/result03.png)
+![](https://github.com/czwinner/DeepLearning/blob/master/image_orientation/results/result04.png)
+在左侧，有原始的未校正图像。在右侧，在应用方向校正后得到我们的图像。 每种情况下，都能够预测原始图像的旋转角度，然后在输出图像中进行校正。
