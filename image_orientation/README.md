@@ -20,3 +20,6 @@ extract_features.py进行特征提取，提取的hdf5文件在hd5目录。<br/>
 &emsp;&emsp;训练分类器来预测图像方向使用train_model.py完成 - 提供输入HDF5数据集的路径，train_model.py负责调整Logistic回归超参数并输出模型到磁盘。
 训练的模型保存在models目录中。一旦train_model.py完成执行，我们的分类器获得了92％的准确率。<br/>
 
+![](https://github.com/czwinner/DeepLearning/blob/master/image_orientation/results/%E5%87%86%E7%A1%AE%E7%8E%87.png)
+<h3>纠正方向</h3>
+&emsp;&emsp;为了证明我们的VGG16特征提取+ Logistic回归分类器可以对图像进行分类校正，orient_images.py随机从数据集中抽取10张旋转的图片进行测试，结果如下：  
