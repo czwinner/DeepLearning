@@ -22,4 +22,4 @@ D:\tensorflow\models\research
 目的是执行python时可以用到clone下来的object api
 最后执行python object_detection/builders/model_builder_test.py
 出现下图说明安装成功！
-
+![](https://github.com/czwinner/DeepLearning/blob/master/pedestrian_demo/pictures/%E6%B5%8B%E8%AF%95%E6%88%90%E5%8A%9F.png)
