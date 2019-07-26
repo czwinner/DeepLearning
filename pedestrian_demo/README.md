@@ -26,7 +26,7 @@ D:\tensorflow\models\research
 ![](https://github.com/czwinner/DeepLearning/blob/master/pedestrian_demo/pictures/%E6%B5%8B%E8%AF%95%E6%88%90%E5%8A%9F.png)
 
 ## 行人数据准备
-[视频数据](http://www.robots.ox.ac.uk/ActiveVision/Research/Projects/2009bbenfold_headpose/Datasets/TownCentreXVID.avi)
-[标注数据](http://www.robots.ox.ac.uk/ActiveVision/Research/Projects/2009bbenfold_headpose/Datasets/TownCentre-groundtruth.top)
+[视频数据](http://www.robots.ox.ac.uk/ActiveVision/Research/Projects/2009bbenfold_headpose/Datasets/TownCentreXVID.avi)<br>
+[标注数据](http://www.robots.ox.ac.uk/ActiveVision/Research/Projects/2009bbenfold_headpose/Datasets/TownCentre-groundtruth.top)<br>
 下载到D:\images\video下
 执行extract_towncentre.py读取视频数据，视频总共7500多帧，前3600帧作为训练集
