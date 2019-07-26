@@ -28,5 +28,5 @@ D:\tensorflow\models\research
 ## 行人数据准备
 [视频数据](http://www.robots.ox.ac.uk/ActiveVision/Research/Projects/2009bbenfold_headpose/Datasets/TownCentreXVID.avi)<br>
 [标注数据](http://www.robots.ox.ac.uk/ActiveVision/Research/Projects/2009bbenfold_headpose/Datasets/TownCentre-groundtruth.top)<br>
-下载到D:\images\video下
+下载到D:\images\video下,
 执行extract_towncentre.py读取视频数据，视频总共7500多帧，前3600帧作为训练集
