@@ -103,3 +103,5 @@ python predict.py
 --image path/to/input/image.png
 --num-classes 3
 ```
+测试效果如下:<br>
+![](https://github.com/czwinner/DeepLearning/blob/master/ssds_and_rcnn/test.png)
