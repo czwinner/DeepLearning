@@ -35,30 +35,30 @@ classes.pbtxt testing.record training.record
 前往[页面](https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs)下载faster_rcnn_resnet101_pets.config保存到experiments/training,打开faster_rcnn_lisa.config，修改
 ```python
 model {
-faster_rcnn {
-num_classes: 37
-image_resizer {
-keep_aspect_ratio_resizer {
-min_dimension: 600
-max_dimension: 1024
-}
-}
-feature_extractor {
-type: 'faster_rcnn_resnet101'
-first_stage_features_stride: 16
+  faster_rcnn {
+    num_classes: 37
+  image_resizer {
+    keep_aspect_ratio_resizer {
+      min_dimension: 600
+      max_dimension: 1024
+                              }
+                }
+  feature_extractor {
+  type: 'faster_rcnn_resnet101'
+  first_stage_features_stride: 16
 }
 ```
 中的numclasses为3<br>
 ```python
 train_config: {
-85 batch_size: 1
-86 ...
-87 num_steps: 50000
-88 data_augmentation_options {
-89 random_horizontal_flip {
-90 }
-91 }
-92 }
+  batch_size: 1
+ ...
+  num_steps: 50000
+  data_augmentation_options {
+    random_horizontal_flip {
+                           }
+                            }
+}
 ```
 num_steps改为50000<br>
 ```python
