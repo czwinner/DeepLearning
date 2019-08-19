@@ -22,3 +22,84 @@ experiemnts目录下包含training和exported_model目录。training目录存储
 ls lisa/records/
 classes.pbtxt testing.record training.record
 ```
+## 配置Faster R-CNN
+在LISA数据集上训练Faster R-CNN分为四步:<br>
+1. 下载预训练的Faster R-CNN<br>
+2. 下载示例TFOD API配置文件，修改为指向我们的record文件<br>
+3. 开始训练<br>
+4. 训练完成后导出冻结模型图<br>
+### 下载预训练模型
+前往[tensorflow model zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md),下载faster_rcnn_resnet101_coco_2018_01_28.tar.gz,下载后放入experiments/training子目录并解压。
+### 下载配置文件
+有了模型权重，还需要一个配置文件配置如何训练/微调网络
+前往[页面](https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs)下载faster_rcnn_resnet101_pets.config保存到experiments/training,打开faster_rcnn_lisa.config，修改
+```python
+model {
+faster_rcnn {
+num_classes: 37
+image_resizer {
+keep_aspect_ratio_resizer {
+min_dimension: 600
+max_dimension: 1024
+}
+}
+feature_extractor {
+type: 'faster_rcnn_resnet101'
+first_stage_features_stride: 16
+}
+```
+中的numclasses为3<br>
+```python
+train_config: {
+85 batch_size: 1
+86 ...
+87 num_steps: 50000
+88 data_augmentation_options {
+89 random_horizontal_flip {
+90 }
+91 }
+92 }
+```
+num_steps改为50000<br>
+```python
+fine_tune_checkpoint:"/home/czwinner/ssds_and_rcnn/lisa/experiments/training/faster_rcnn_resnet101_coco_2018_01_28/model.ckpt"
+```
+接着修改train_input_reader中的input_path和label_map_path
+```python
+train_input_reader:{
+  tf_record_input_reader{
+    input_path:"/home/czwinner/ssds_and_rcnn/lisa/records/trainging.record"
+                        }
+    label_map_path:"/home/czwinner/ssds_and_rcnn/lisa/records/classes.pbtxt"
+                    }
+```
+同理修改eval_input_reader中的input_path和label_map_path
+## 训练Faster R-CNN
+可以用以下命令开始训练
+```python
+python object_detection/model_main.py
+--pipeline_config_path=ssds_and_rcnn/lisa/experiments/training/faster_rcnn_lisa.config
+--model_dir=ssds_and_rcnn/lisa/experiemtns/training
+--num_train_steps=50000
+--sample_1_of_n_eval_examples=1
+--alsologtostderr
+```
+## 导出冻结模型图
+模型训练好后进入models/research目录执行<br>
+```python
+python object_detection/export_inference_graph.py
+--input_type image_tensor
+--pipeline_config_path /home/czwinner/ssds_and_rcnn/lisa/experiments/traing/faster_rcnn_lisa.config
+--trained_checkpoint_prefix /home/czwinner/ssds_and_rcnn/lisa/experiments/trainging/model.ckpt-50000
+--output_directory /home/czwinner/ssds_and_rcnn/lisa/experiments/exported_model
+```
+查看exported_model目录，可以看到frozen_inference_grpah.pb文件
+## 在图像上测试
+训练并导出模型后就可以评估准确性，执行
+```python
+python predict.py
+--model lisa/experiments/exported_model/frozen_inference_graph.pb
+--labels lisa/records/classes.pbtxt
+--image path/to/input/image.png
+--num-classes 3
+```
