@@ -76,7 +76,7 @@ train_input_reader:{
 同理修改eval_input_reader中的input_path和label_map_path
 ## 训练Faster R-CNN
 可以用以下命令开始训练
-```python
+```
 python object_detection/model_main.py
 --pipeline_config_path=ssds_and_rcnn/lisa/experiments/training/faster_rcnn_lisa.config
 --model_dir=ssds_and_rcnn/lisa/experiemtns/training
@@ -86,7 +86,7 @@ python object_detection/model_main.py
 ```
 ## 导出冻结模型图
 模型训练好后进入models/research目录执行<br>
-```python
+```
 python object_detection/export_inference_graph.py
 --input_type image_tensor
 --pipeline_config_path /home/czwinner/ssds_and_rcnn/lisa/experiments/traing/faster_rcnn_lisa.config
@@ -96,7 +96,7 @@ python object_detection/export_inference_graph.py
 查看exported_model目录，可以看到frozen_inference_grpah.pb文件
 ## 在图像上测试
 训练并导出模型后就可以评估准确性，执行
-```python
+```
 python predict.py
 --model lisa/experiments/exported_model/frozen_inference_graph.pb
 --labels lisa/records/classes.pbtxt
