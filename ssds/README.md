@@ -19,3 +19,48 @@ classes.pbtxt testing.record training.record
 ```
 fine_tune_checkpoint:"/home/czwinner/ssds/dlib_front_and_rear_vehicles_v1/experiments/training/ssd_inception_v2_coco_2018_01_28/model.ckpt"
 ```
+修改训练步数num_steps:200000，可以自行调整<br>
+修改train_input_reader中的input_path和label_map_path
+```
+train_input_reader:{
+  tf_record_input_reader{
+    input_path:"/home/czwinner/ssds/dlib_front_and_rear_vehicles_v1/records/training.record"
+                        }
+    label_map_path:"/home/czwinner/ssds/dlib_front_and_rear_vehicles_v1/records/classes.pbtxt"
+    }
+```
+修改eval_input_reader中的input_path和label_map_path
+```
+eval_input_reader{
+  tf_record_input_reader{
+    input_path:"/home/czwinner/ssds/dlib_front_and_rear_vehicles_v1/records/testing.record"
+                        }
+    label_map_path:"/home/czwinner/ssds/dlib_front_and_rear_vehicles_v1/records/classes.pbtxt"
+    shuffle:false
+    num_readers:1
+}
+```
+修改eval_config中的num_examples
+```
+eval_config:{
+  num_examples:382
+}
+```
+修改完配置文件后就可以开始训练了<br>
+进入models/research目录执行<br>
+```python
+python object_detection/legacy/train.py
+--logtostderr
+--train_dir=/home/czwinner/ssds/dlib_front_and_rear_vehicles_v1/experiments/training
+--pipeline_config_path=/home/czwinner/ssds/dlib_front_and_rear_vehicles_v1/ssd_vehicles.config
+```
+# 导出ssd模型
+训练完成后进入models/research,执行<br>
+```python
+python object_detection/export_inference_graph.py
+--input_type image_tensor
+--pipeline_config_path /home/czwinner/ssds/dlib_front_and_rear_vehicles_v1/experiments/trainging/ssd_vehicles.config
+--trained_checkpoint_prefix /home/czwinner/ssds/dlib_front_and_rear_vehicles_v1/experiments/trainging/model.ckpt-200000
+--output_directory /home/czwinner/ssds/dlib_front_and_rear_vehicles_v1/experiments/exported_model
+```
+查看
