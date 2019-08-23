@@ -72,4 +72,4 @@ python predict.py
 --num_classes 2
 ```
 测试效果如下:<br>
-
+![](https://github.com/czwinner/DeepLearning/blob/master/ssds/pictures/2.png)
