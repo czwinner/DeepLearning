@@ -48,7 +48,7 @@ eval_config:{
 ```
 修改完配置文件后就可以开始训练了<br>
 进入models/research目录执行<br>
-```python
+```
 python object_detection/legacy/train.py
 --logtostderr
 --train_dir=/home/czwinner/ssds/dlib_front_and_rear_vehicles_v1/experiments/training
@@ -56,11 +56,20 @@ python object_detection/legacy/train.py
 ```
 # 导出ssd模型
 训练完成后进入models/research,执行<br>
-```python
+```
 python object_detection/export_inference_graph.py
 --input_type image_tensor
 --pipeline_config_path /home/czwinner/ssds/dlib_front_and_rear_vehicles_v1/experiments/trainging/ssd_vehicles.config
 --trained_checkpoint_prefix /home/czwinner/ssds/dlib_front_and_rear_vehicles_v1/experiments/trainging/model.ckpt-200000
 --output_directory /home/czwinner/ssds/dlib_front_and_rear_vehicles_v1/experiments/exported_model
 ```
-查看
+查看exported_model目录有frozen_inference_graph.pb文件<br>
+模型导出后可以进行预测，执行
+```
+python predict.py
+--model dlib_front_and_rear_vehicles_v1/experiments/exported_model/frozen_inference_graph.pb
+--image path/to/input/image.png (测试的图像路径)
+--num_classes 2
+```
+测试效果如下:<br>
+
