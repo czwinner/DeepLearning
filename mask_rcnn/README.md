@@ -71,3 +71,23 @@ isic2018目录包含ISIC 2018数据集本身。<br>
 lesions.py文件包含训练Mask R-CNN的代码。
 mask_rcnn_coco.h5文件是一个mask R-CNN，其骨干网咯ResNet在COCO数据集上进行了预训练。我们将根据自己的分割任务对此模型进行微调。该文件的[下载地址](https://github.com/matterport/Mask_RCNN/releases)<br>
 mrcnn目录包含Matterport Keras + Mask R-CNN实现。将Mask-RCNN / mrcnn目录复制到这个项目中。
+### 训练
+执行如下命令:
+```python
+python lesions.py --mode train
+Starting at epoch 0. LR=0.001
+Epoch 1/20
+2075/2075 - 1234s 595ms/step - loss: 1.1190 - val_loss: 0.8835
+Epoch 2/20
+2075/2075 - 1192s 575ms/step - loss: 0.8643 - val_loss: 0.8789
+Epoch 3/20
+2075/2075 - 1176s 567ms/step - loss: 0.8274 - val_loss: 0.7446
+```
+前20epoch训练头层，然后，在第20轮结束时，解冻所有层，并开始整个网络训练：
+```
+Starting at epoch 20. LR=0.0001
+Epoch 21/40
+2075/2075 - 1757s 847ms/step - loss: 0.4888 - val_loss: 0.5687
+Epoch 22/40
+2075/2075 - 1757s 847ms/step - loss: 0.4409 - val_loss: 0.6123
+```
