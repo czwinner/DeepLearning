@@ -7,4 +7,4 @@ image_orientation:图像纠正<br/>
 resnet_tinyimagenet:基于ResNettiny_imagenet分类<br/> 
 ssds_rcnn:Tensorflow Object Detection训练faster_rcnn<br>
 ssds:Tensorflow objection Detectio训练ssd<br>
-
+mask_rcnn:基于Mask R-CNN癌症检测<br>
