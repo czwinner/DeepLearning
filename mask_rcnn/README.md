@@ -93,3 +93,10 @@ Epoch 22/40
 2075/2075 - 1757s 847ms/step - loss: 0.4409 - val_loss: 0.6123
 ......
 ```
+### Mask R-CNN预测
+Mask R-CNN已经过训练，可以用它做出预测。 打开终端并执行以下命令：
+```
+python lesions.py --mode predict \
+--image isic2018/ISIC2018_Task1-2_Training_Input/ISIC_0000000.jpg
+```
+以下是一些预测结果:<br>
