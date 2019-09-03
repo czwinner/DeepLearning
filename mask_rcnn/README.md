@@ -55,4 +55,13 @@ ISIC2018_Task1-2_Training_Input/ISIC_0000003.jpg
 ISIC2018_Task1-2_Training_Input/ISIC_0000004.jpg
 ISIC2018_Task1-2_Training_Input/ISIC_0000006.jpg
 ```
+mask图像具有类似的文件名结构：
+```
+$ ls -l ISIC2018_Task1_Training_GroundTruth/*.png | head -n 5
+ISIC2018_Task1_Training_GroundTruth/ISIC_0000000_segmentation.png
+ISIC2018_Task1_Training_GroundTruth/ISIC_0000001_segmentation.png
+ISIC2018_Task1_Training_GroundTruth/ISIC_0000003_segmentation.png
+ISIC2018_Task1_Training_GroundTruth/ISIC_0000004_segmentation.png
+ISIC2018_Task1_Training_GroundTruth/ISIC_0000006_segmentation.png
+```
 
