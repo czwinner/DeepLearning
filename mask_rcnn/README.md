@@ -46,3 +46,13 @@ ISIC2018_Task1-2_Training_Input.zip
 ISIC2018_Task1_Training_GroundTruth
 ISIC2018_Task1_Training_GroundTruth.zip
 ```
+训练图像的文件名：
+```
+$ ls -l ISIC2018_Task1-2_Training_Input/*.jpg | head -n 5
+ISIC2018_Task1-2_Training_Input/ISIC_0000000.jpg
+ISIC2018_Task1-2_Training_Input/ISIC_0000001.jpg
+ISIC2018_Task1-2_Training_Input/ISIC_0000003.jpg
+ISIC2018_Task1-2_Training_Input/ISIC_0000004.jpg
+ISIC2018_Task1-2_Training_Input/ISIC_0000006.jpg
+```
+
