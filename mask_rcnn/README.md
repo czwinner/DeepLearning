@@ -70,3 +70,4 @@ ISIC2018_Task1_Training_GroundTruth/ISIC_0000006_segmentation.png
 isic2018目录包含ISIC 2018数据集本身。<br>
 lesions.py文件包含训练Mask R-CNN的代码。
 mask_rcnn_coco.h5文件是一个mask R-CNN，其骨干网咯ResNet在COCO数据集上进行了预训练。我们将根据自己的分割任务对此模型进行微调。该文件的[下载地址](https://github.com/matterport/Mask_RCNN/releases)
+mrcnn目录包含Matterport Keras + Mask R-CNN实现。将Mask-RCNN / mrcnn目录复制到这个项目中。
