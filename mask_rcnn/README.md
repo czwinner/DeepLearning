@@ -73,7 +73,7 @@ mask_rcnn_coco.h5文件是一个mask R-CNN，其骨干网咯ResNet在COCO数据�
 mrcnn目录包含Matterport Keras + Mask R-CNN实现。将Mask-RCNN / mrcnn目录复制到这个项目中。
 ### 训练
 执行如下命令:
-```python
+```
 python lesions.py --mode train
 Starting at epoch 0. LR=0.001
 Epoch 1/20
@@ -82,6 +82,7 @@ Epoch 2/20
 2075/2075 - 1192s 575ms/step - loss: 0.8643 - val_loss: 0.8789
 Epoch 3/20
 2075/2075 - 1176s 567ms/step - loss: 0.8274 - val_loss: 0.7446
+......
 ```
 前20epoch训练头层，然后，在第20轮结束时，解冻所有层，并开始整个网络训练：
 ```
@@ -90,4 +91,5 @@ Epoch 21/40
 2075/2075 - 1757s 847ms/step - loss: 0.4888 - val_loss: 0.5687
 Epoch 22/40
 2075/2075 - 1757s 847ms/step - loss: 0.4409 - val_loss: 0.6123
+......
 ```
