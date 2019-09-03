@@ -37,3 +37,4 @@ $ python
 要访问数据集，首先需要在ISIC 2018网站上创建一个帐户：[ISIC2018](https://challenge.kitware.com/#phase/5abcb19a56357d0139260e53)
 注册后，单击“下载训练数据集”和“下载真实数据”按钮，下载.zip档案的训练数据和相应的真实mask数据<br>
 ![](https://github.com/czwinner/DeepLearning/blob/master/mask_rcnn/pictures/3.png)
+皮肤病变边界分割数据集包括2,594个JPEG格式的图像（11GB）和2,594个相应的PNG格式的真实mask数据（27MB）。
