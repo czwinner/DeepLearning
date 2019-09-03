@@ -100,3 +100,4 @@ python lesions.py --mode predict \
 --image isic2018/ISIC2018_Task1-2_Training_Input/ISIC_0000000.jpg
 ```
 以下是一些预测结果:<br>
+![](https://github.com/czwinner/DeepLearning/blob/master/mask_rcnn/pictures/4.png)
