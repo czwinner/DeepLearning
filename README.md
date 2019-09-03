@@ -5,5 +5,6 @@ dogs_cats:猫狗识别<br/>
 emotion_recognition:表情识别<br/>   
 image_orientation:图像纠正<br/>   
 resnet_tinyimagenet:基于ResNettiny_imagenet分类<br/> 
-ssds_rcnn:Tensorflow Object Detection 训练faster_rcnn<br>
-ssds:
+ssds_rcnn:Tensorflow Object Detection训练faster_rcnn<br>
+ssds:Tensorflow objection Detectio训练ssd<br>
+
