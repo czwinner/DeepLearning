@@ -35,3 +35,4 @@ $ python
 ![](https://github.com/czwinner/DeepLearning/blob/master/mask_rcnn/pictures/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-09-03%20%E4%B8%8A%E5%8D%888.27.50.png)
 ### 下载ISIS 2018数据集
 要访问数据集，首先需要在ISIC 2018网站上创建一个帐户：[ISIC2018](https://challenge.kitware.com/#phase/5abcb19a56357d0139260e53)
+注册后，单击“下载训练数据集”和“下载真实数据”按钮，下载.zip档案的训练数据和相应的真实mask数据<br>
