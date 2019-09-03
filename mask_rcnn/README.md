@@ -23,7 +23,7 @@ $ cd Mask_RCNN
 pip install -r requirements.txt
 ```
 要验证是否已成功安装Keras + Mask R-CNN软件包，请从Mask_RCNN目录中打开Python shell并尝试导入mrcnn软件包：<br>
-```python
+```
 $ python
 >>> import mrcnn
 >>>
